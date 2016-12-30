@@ -13,11 +13,11 @@ Provides datasets for Australia to be used with [H&H|Digital's Laravel Datasets 
 
 Via composer:
 
-$ composer require bluora/laravel-datasets ~1.0
+$ composer require bluora/laravel-datasets-australia
 
 ## Configuration
 
-Enable this dataset collection by editing config/dataset.php:
+Enable this dataset collection by editing config/datasets.php:
 
 ```php
 return [
