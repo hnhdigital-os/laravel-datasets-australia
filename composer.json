@@ -1,0 +1,21 @@
+{
+    "name": "bluora/laravel-datasets-australia",
+    "description": "Provides datasets for Australia.",
+    "keywords": ["laravel","datasets","australia"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rocco Howard",
+            "email": "rocco@bluora.com.au"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "bluora/laravel-datasets": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bluora\\LaravelDatasetsAustralia\\": "src/"
+        }
+    }
+}
