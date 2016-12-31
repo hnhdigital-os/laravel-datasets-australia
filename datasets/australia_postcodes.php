@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Australian Postcodes
+ * Australian Postcodes.
  *
  * @source https://github.com/charliesome/australia_postcode
  */
@@ -27,13 +27,13 @@ return [
             if (empty($value)) {
                 $value = 0;
             }
-            $value = (float)$value;
+            $value = (float) $value;
         },
         'longitude' => function (&$value, $data_row) {
             if (empty($value)) {
                 $value = 0;
             }
-            $value = (float)$value;
+            $value = (float) $value;
         },
     ],
     'import_keys' => [

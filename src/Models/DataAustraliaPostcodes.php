@@ -38,8 +38,8 @@ class DataAustraliaPostcodes extends EloquentModel
     protected $fillable = [
         'postcode',
         'suburb',
-        'state',  
-        'dc',   
+        'state',
+        'dc',
         'type',
         'latitude',
         'longitude',
