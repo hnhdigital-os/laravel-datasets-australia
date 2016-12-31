@@ -33,9 +33,9 @@ return [
 
 ## Available datasets
 
-* Australia Banks
-* Australia BSB
-* Australia Postcodes
+* Banks - (apca.com.au)
+* BSB - (apca.com.au)
+* Postcodes - (https://github.com/charliesome/australia_postcode)
 
 ## Contributing
 
