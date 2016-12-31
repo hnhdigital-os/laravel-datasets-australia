@@ -79,13 +79,12 @@ return [
         return sprintf('ftp://apca.com.au/%s', $latest_file);
     },
     'no_header' => true,
-    'mapping' => [
+    'mapping'   => [
         2 => 'bsb',
         0 => 'bank',
         1 => 'title',
     ],
     'change_read_data' => function ($data) {
-
         $result = [];
         foreach ($data as $row) {
             $bsb_list = explode(',', str_replace(' ', '', array_get($row, 'bsb', '')));
@@ -103,10 +102,11 @@ return [
                 ];
             }
         }
+
         return $result;
     },
     'import_keys' => [
         'bsb',
-        'bank'
+        'bank',
     ],
 ];
