@@ -29,6 +29,12 @@ return [
 ];
 ```
 
+## Available datasets
+
+* Australia Banks
+* Australia BSB
+* Australia Postcodes
+
 ## Contributing
 
 Please see [CONTRIBUTING](https://github.com/bluora/laravel-datasets/blob/master/CONTRIBUTING.md) for details.
