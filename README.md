@@ -9,6 +9,8 @@
 
 Provides datasets for Australia to be used with [H&H|Digital's Laravel Datasets Package](https://github.com/bluora/laravel-datasets).
 
+[![Latest Stable Version](https://poser.pugx.org/bluora/laravel-datasets-australia/v/stable.svg)](https://packagist.org/packages/bluora/laravel-datasets) [![StyleCI](https://styleci.io/repos/77714252/shield?branch=master)](https://styleci.io/repos/77714252) [![Built for Laravel](https://img.shields.io/badge/Built_for-Laravel-green.svg)](https://laravel.com/) [![License](https://poser.pugx.org/bluora/laravel-datasets/license.svg)](https://packagist.org/packages/bluora/laravel-datasets)
+
 ## Install
 
 Via composer:
