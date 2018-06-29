@@ -20,7 +20,6 @@ class DataAustraliaPostcodes extends EloquentModel
      */
     protected $casts = [
         'id'        => 'integer',
-        'uuid'      => 'uuid',
         'postcode'  => 'integer',
         'suburb'    => 'string',
         'state'     => 'string',

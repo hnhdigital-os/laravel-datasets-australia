@@ -10,34 +10,31 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateDataAustraliaPostcodesTable extends Migration
 {
-    use MigrationsTrait;
-
     protected $table_name = 'data_australia_postcodes';
+    protected $connection = 'default';
 
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up($connection = null)
     {
-        Schema::create($this->table_name, function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('uuid', 16);
-            $table->integer('postcode');
-            $table->string('suburb')->default('');
-            $table->string('state')->default('');
-            $table->string('dc')->default('');
-            $table->string('type')->default('');
-            $table->double('latitude', 8, 6);
-            $table->double('longitude', 9, 6);
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->timestamp('archived_at')->nullable();
-            $table->timestamp('deleted_at')->nullable();
-        });
-
-        self::updateUuid($this->table_name, 'uuid');
+        Schema::connection(!is_null($connection) ? $connection : $this->connection)
+            ->create($this->table_name, function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->integer('postcode');
+                $table->string('suburb')->default('');
+                $table->string('state')->default('');
+                $table->string('dc')->default('');
+                $table->string('type')->default('');
+                $table->double('latitude', 8, 6);
+                $table->double('longitude', 9, 6);
+                $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+                $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+                $table->timestamp('archived_at')->nullable();
+                $table->timestamp('deleted_at')->nullable();
+            });
     }
 
     /**
@@ -45,9 +42,9 @@ class CreateDataAustraliaPostcodesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down($connection = null)
     {
-        self::dropUuidTrigger($this->table_name);
-        self::standardTableDrop($this->table_name);
+        self::connection(!is_null($connection) ? $connection : $this->connection)
+            ->drop($this->table_name);
     }
 }
