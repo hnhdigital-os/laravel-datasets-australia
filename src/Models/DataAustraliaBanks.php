@@ -20,6 +20,7 @@ class DataAustraliaBanks extends EloquentModel
      */
     protected $casts = [
         'id'    => 'integer',
+        'uuid'  => 'uuid',
         'bsb'   => 'string',
         'bank'  => 'string',
         'title' => 'string',
